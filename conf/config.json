@@ -1,4 +1,5 @@
 {
   "LOG_LEVEL": "DEBUG",
-  "JWT_EXP": 1
+  "JWT_EXP": 1,
+  "redis_enable":false
 }

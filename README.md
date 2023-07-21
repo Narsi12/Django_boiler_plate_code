@@ -1,7 +1,7 @@
 #Steps to run the application
 # Features Available
     - API Versioning
-    - Token Authentication (JWT)
+    - Token Authentication (Simple-JWT)
     - Exception handling
     - Proper Logging (Request, Response and Timestamp)
     - Documnetation (Swagger)
@@ -15,13 +15,15 @@
     python3 -m venv <virtualenv path and venv name>
                     or
     sudo apt-get install virtualenv
+
     virtualenv <name>
             or
     mkvirtualenv <name>
 ### activate our virtualenv 
-    when use pip install virtualwrapper-win this command to installing virtual env using following command ->
-        workon <virtualenv>
-
+    Windows :
+        <Virtualenv name>/Scripts/activate
+    Linux :
+        source <Virtualenv name>/bin/activate
 ### Install packages
     pip3 install -r requirements.txt
     
@@ -56,17 +58,16 @@ If you want to change the port then use following command
 
 You can able to add data in tables , delete,update etc.
 
-### Run all test cases
-    python manage.py tests
+### Running test cases
+    python manage.py test <app name>
 
-### Run single Test case
-    python manage.py test <method name>
-
-### Running a specific test case in Django when our app has a tests directory
-    ./manage.py test my_app
-
-###  test a specific file inside a tests folder    
-    python manage.py test AppName.tests.test_page
-
+ 
 ### Open docs in browser using link
-    http://127.0.0.1:8000/app/user/swagger/
+    http://127.0.0.1:8000/swagger/
+
+# Docker process
+  # Docker running command
+    Create docker-compose.yml file
+
+    For building the containers run the below command
+      ---> docker-compose up --build
